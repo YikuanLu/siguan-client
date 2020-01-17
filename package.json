@@ -1,0 +1,60 @@
+{
+  "name": "shangniu-score",
+  "version": "1.0.0",
+  "description": "尚牛电竞比分网(shangniu.cn)是一家正规专业提供电子竞技实时比分数据和赛事直播统计的综合型电竞数据平台,包括lol比分,dota2比分,csgo比分,王者荣耀比分,ow比分等比分直播，更有最新最快的电竞情报及电竞比分预测发布。",
+  "keyword": "电竞比分,lol比分,电竞比赛直播,csgo比分,电竞数据,lol比赛数据,dota比分",
+  "author": "hsl947",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env mode=dev nuxt",
+    "build": "cross-env mode=pro nuxt build",
+    "start": "cross-env mode=pro nuxt start",
+    "generate": "cross-env mode=pro nuxt generate",
+    "lint": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@tinymce/tinymce-vue": "^3.0.1",
+    "ant-design-vue": "^1.4.0",
+    "cookieparser": "^0.1.0",
+    "crypto-js": "^3.1.9-1",
+    "echarts": "^4.3.0",
+    "install": "^0.13.0",
+    "js-cookie": "^2.2.1",
+    "nuxt": "^2.10.1",
+    "nuxt-i18n": "^6.3.0",
+    "tinymce": "^5.0.16",
+    "vue-superslide": "^0.1.1",
+    "vuex-persistedstate": "^2.5.4"
+  },
+  "devDependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/component-cache": "^1.1.5",
+    "@nuxtjs/eslint-config": "^1.0.1",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-component": "^1.1.1",
+    "babel-plugin-import": "^1.12.2",
+    "cross-env": "^5.2.1",
+    "eslint": "^6.1.0",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-plugin-vue": "^5.2.3",
+    "husky": "^2.6.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "lint-staged": "^8.2.1",
+    "mini-css-extract-plugin": "^0.8.0",
+    "nodemon": "^1.18.9",
+    "scss": "^0.2.4",
+    "scss-loader": "^0.0.1",
+    "webpack-filter-warnings-plugin": "^1.2.1"
+  }
+}

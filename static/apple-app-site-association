@@ -1,0 +1,8 @@
+{ "applinks": {
+   "apps": [],
+   "details": [ {
+        "appID": "86Z66CWH2D.com.shangniu.snscore",
+        "paths": [ "/support/*", "/qq_conn/101825319/*", "/wechat_conn/*" ]
+      }]
+   }
+}

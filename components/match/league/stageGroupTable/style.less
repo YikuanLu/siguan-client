@@ -1,0 +1,22 @@
+.tabContent {
+  padding: 0 10px;
+  padding-bottom: 20px;
+  .header {
+    // text-align: center;
+    padding-left: 14px;
+    font-size: 16px;
+    border-bottom: 1px solid #e8e8e8;
+    line-height: 38px;
+    position: relative;
+    &::before {
+      content:'';
+      position: absolute;
+      width: 4px;
+      height: 16px;
+      background-color: #5cb8fa;
+      left: 0;
+      top: 50%;
+      margin-top: -8px;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+# gitlab CI自动部署配置文件
+# created by Hsl @20191102
+# 触发条件：
+#   1、远程其他分支合并到远程 master分支
+#   2、本地master推送到远程 master分支
+# 触发CI流水线后，需要到线上手动确认操作(CI/CD -> Pipelines)
+# 打包部署完成，在环境列表里 (CI/CD -> Environments) 会提供每个环境的部署的完整历史记录
+# 可以回滚重新部署 (re-deploy) 到指定版本
+stages:
+  - deploy
+
+cache:
+  key: ${CI_BUILD_REF_NAME}
+  paths:
+    - node_modules/
+
+# 国内服务器
+deploy:
+  stage: deploy
+  environment:
+    name: production
+    url: http://47.99.174.39
+  script:
+    - npm install
+    - npm run build
+    - echo 'succeed build！'
+  tags:
+    - nuxt-build
+  only:
+    - master
+  allow_failure: false
+  when: manual
+
+# 香港服务器
+deploy_HK:
+  stage: deploy
+  environment:
+    name: production_HK
+    url: http://47.52.75.25
+  script:
+    - npm install
+    - npm run build
+    - echo 'HK succeed build！'
+  tags:
+    - nuxt-build-HK
+  only:
+    - master
+  allow_failure: false
+  when: manual
+
+# 正式环境服务器
+deploy_Offcial:
+  stage: deploy
+  environment:
+    name: production_offcial
+    url: http://118.31.229.45
+  script:
+    - npm install
+    - npm run build
+    - echo 'offcial succeed build！'
+  tags:
+    - nuxt-build-offcial
+  only:
+    - master
+  allow_failure: false
+  when: manual

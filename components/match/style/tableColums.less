@@ -1,0 +1,24 @@
+.teamBattleGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .teamItem {
+    display: flex;
+    width: 86px;
+    span,img {
+      display: block;
+    }
+    span {
+      vertical-align: middle;
+      display: inline-block;
+      width: 60px;
+      overflow: hidden; //超出的文本隐藏
+      text-overflow: ellipsis; //溢出用省略号显示
+      white-space: nowrap; //溢出不换行
+      font-size: 14px;
+    }
+    img {
+      vertical-align: middle;
+    }
+  }
+}

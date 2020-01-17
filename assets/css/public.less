@@ -1,0 +1,338 @@
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+body {
+  margin: 0 !important;
+}
+
+i.anticon {
+  display: inline-block;
+  /* line-height: 32px; */
+}
+.ant-select-selection-selected-value {
+  display: inline-block;
+  line-height: 30px;
+}
+.ant-select-arrow {
+  top: 0;
+  margin-top: 0;
+}
+
+/* 公用容器样式，1200居中 */
+.wrap-box {
+  position: relative;
+  width: 1200px;
+  margin: auto;
+}
+
+.my-modal .ant-modal-confirm-btns {
+  display: none !important;
+}
+
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link {
+  line-height: 30px;
+}
+
+.ant-select-arrow-icon {
+  display: inline-block;
+  line-height: 30px !important;
+}
+
+.anticon {
+  &.lol {
+    color: @primary-color;
+  }
+  &.all {
+    color: @primary-color;
+  }
+  &.csgo {
+    color: @primary-color;
+  }
+  &.dota {
+    color: @error-color;
+  }
+  &.kog {
+    color: rgb(240, 209, 76);
+  }
+  &.ow {
+    color: rgb(244, 178, 71);
+  }
+}
+
+.deleteIcon {
+  font-size: 18px;
+  color: #cbcbcb;
+  cursor: pointer;
+  transition: color 0.2s;
+  &:hover {
+    color: #f9444b;
+  }
+}
+
+.detail-content {
+  img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+  }
+}
+
+// span {
+//   vertical-align: middle!important;
+// }
+.tableImgBox {
+  span {
+    vertical-align: middle !important;
+  }
+  img {
+    vertical-align: middle !important;
+  }
+}
+.teamName * {
+  vertical-align: middle !important;
+}
+
+.tableIcon {
+  width: 16px;
+  margin-right: 10px;
+}
+
+// 比赛列表样式
+.game-list.index-list {
+  .game-sort-title {
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #fff;
+    border-bottom: solid 1px rgba(245, 245, 245, 1);
+    .title-iconfont {
+      font-size: 18px;
+      vertical-align: middle;
+    }
+    .text {
+      padding-left: 8px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    &.ongoing {
+      color: #f9444a;
+    }
+    &.notstart {
+      color: #40b268;
+    }
+    &.ended {
+      color: #95a3b1;
+    }
+  }
+  .game-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    vertical-align: middle;
+    margin: 0 10px 0 20px;
+  }
+  .game-name {
+    font-size: 14px;
+    color: rgba(33, 33, 33, 1);
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 100px;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      color: @primary-color;
+    }
+  }
+  .team-name {
+    display: inline-block;
+    width: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    line-height: 20px;
+    padding: 8px 0 !important;
+    color: #333;
+    &.ta-r {
+      text-align: right;
+    }
+    &.ta-l {
+      text-align: left;
+    }
+    &:hover {
+      color: @primary-color;
+    }
+  }
+  table {
+    width: 100%;
+    background: #fff;
+    &.ongoing {
+      .game-score {
+        border: solid 1px #e0e0e0;
+        background: #fff;
+      }
+    }
+    tbody tr {
+      cursor: pointer;
+      transition: all 0.3s;
+      &:hover {
+        -moz-box-shadow: 0 0 6px 2px #ebebeb;
+        -webkit-box-shadow: 0 0 6px 2px #ebebeb;
+        box-shadow: 0 0 6px 2px #ebebeb;
+      }
+    }
+    th {
+      font-size: 14px;
+      color: #999;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      white-space: nowrap;
+      &:first-child {
+        text-align: left;
+      }
+    }
+    td {
+      padding: 4px 0;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 14px;
+      color: #333333;
+      white-space: nowrap;
+      .text {
+        padding: 5px 0;
+      }
+      &.color-999 {
+        color: #999;
+      }
+      &[align='left'] {
+        text-align: left;
+      }
+    }
+    .gameteam-logo {
+      width: 24px;
+      // height: 20px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .game-score {
+      background: rgba(245, 245, 245, 1);
+      color: #333;
+      border-radius: 4px;
+      font-size: 14px;
+      text-align: center;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      display: block;
+      margin: 10px auto;
+    }
+    .game-stats {
+      font-size: 16px;
+      color: #999;
+      margin: 0 4px;
+    }
+    .game-link {
+      margin: 4px;
+      padding: 0 8px;
+    }
+    .game-btn {
+      font-size: 24px;
+      color: #cbcbcb;
+      padding: 0 4px;
+      cursor: pointer;
+      &:hover, &.active{
+        color: @primary-color;
+      }
+    }
+    .game-now {
+      font-size: 14px;
+      color: rgba(33, 33, 33, 1);
+      vertical-align: middle;
+    }
+    .index {
+      width: 84px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border: 1px solid rgba(224, 224, 224, 1);
+      border-radius: 5px;
+      font-size: 14px;
+      color: rgba(51, 51, 51, 1);
+      margin: auto;
+    }
+    .seprator {
+      padding: 0 4px;
+      font-style: normal;
+      font-weight: 900;
+    }
+  }
+}
+
+// 侧边组件样式
+.sider-box {
+  background: #fff;
+  .sider-title {
+    height: 60px;
+    line-height: 0;
+    border-bottom: solid 1px rgba(236, 239, 244, 1);
+    padding: 23px 14px;
+    .title {
+      font-size: 16px;
+      color: rgba(33, 33, 33, 1);
+    }
+    .more {
+      font-size: 14px;
+      color: rgba(153, 153, 153, 1);
+      &:hover {
+        color: @primary-color;
+      }
+    }
+  }
+}
+
+.ant-anchor-wrapper {
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 0 6px 2px #ebebeb;
+  background: #fff;
+  margin-bottom: 10px;
+  .ant-anchor-ink {
+    display: none;
+  }
+}
+
+.ant-modal-content .ant-modal-close-x {
+  width:36px;
+  height:36px;
+  line-height:36px;
+}
+
+.team-name-short{
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100px;
+  vertical-align: middle;
+}
+
+.no-show-link{
+  display: none;
+  visibility: hidden;
+  font-size: 0;
+}
